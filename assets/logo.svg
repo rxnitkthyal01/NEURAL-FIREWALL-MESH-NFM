@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="160" height="160" viewBox="0 0 160 160" fill="none" role="img" aria-labelledby="title desc">
+  <title id="title">Neural Firewall Mesh mark</title>
+  <desc id="desc">A protective shield containing a connected cryptographic mesh.</desc>
+  <defs>
+    <linearGradient id="shield" x1="29" y1="22" x2="132" y2="139" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#67E8F9"/>
+      <stop offset="1" stop-color="#0891B2"/>
+    </linearGradient>
+    <linearGradient id="mesh" x1="48" y1="51" x2="112" y2="111" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#22D3EE"/>
+      <stop offset="1" stop-color="#67E8F9"/>
+    </linearGradient>
+  </defs>
+  <path d="M80 15 132 35v38c0 34-21 57-52 72C49 130 28 107 28 73V35l52-20Z" stroke="url(#shield)" stroke-width="6" stroke-linejoin="round"/>
+  <path d="M80 42 105 57v30l-25 16-25-16V57l25-15Z" stroke="url(#mesh)" stroke-width="4" stroke-linejoin="round"/>
+  <path d="m55 57 25 15 25-15M80 72v31M55 87l25-15 25 15" stroke="url(#mesh)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="55" cy="57" r="6" fill="#A5F3FC" stroke="#0891B2" stroke-width="2"/>
+  <circle cx="80" cy="42" r="6" fill="#A5F3FC" stroke="#0891B2" stroke-width="2"/>
+  <circle cx="105" cy="57" r="6" fill="#A5F3FC" stroke="#0891B2" stroke-width="2"/>
+  <circle cx="55" cy="87" r="6" fill="#A5F3FC" stroke="#0891B2" stroke-width="2"/>
+  <circle cx="80" cy="72" r="7" fill="#E0FBFF" stroke="#0891B2" stroke-width="2.5"/>
+  <circle cx="105" cy="87" r="6" fill="#A5F3FC" stroke="#0891B2" stroke-width="2"/>
+  <circle cx="80" cy="103" r="6" fill="#A5F3FC" stroke="#0891B2" stroke-width="2"/>
+</svg>

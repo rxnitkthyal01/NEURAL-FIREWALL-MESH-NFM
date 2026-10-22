@@ -1,0 +1,1 @@
+"""NFM command-line interface."""
