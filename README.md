@@ -1,14 +1,25 @@
 <div align="center">
   <img src="assets/logo.svg" alt="Neural Firewall Mesh shield and cryptographic mesh logo" width="132" height="132" />
   <h1>Neural Firewall Mesh</h1>
+  <p><strong>r9sys Workspace</strong></p>
   <p><strong>NO TRUST. ONLY MATH.</strong></p>
   <p>Cryptographic identity and deterministic zero-trust authorization for protected TCP services.</p>
   <p>
-    <a href="https://github.com/rxnitkthyal01/-NEURAL-FIREWALL-MESH-NFM-/releases/latest"><img src="https://img.shields.io/github/v/release/rxnitkthyal01/-NEURAL-FIREWALL-MESH-NFM-?style=flat-square&amp;label=release" alt="Latest GitHub release" /></a>
-    <a href="LICENSE"><img src="https://img.shields.io/github/license/rxnitkthyal01/-NEURAL-FIREWALL-MESH-NFM-?style=flat-square" alt="GitHub license" /></a>
-    <a href="https://github.com/rxnitkthyal01/-NEURAL-FIREWALL-MESH-NFM-/actions/workflows/ci.yml"><img src="https://img.shields.io/github/actions/workflow/status/rxnitkthyal01/-NEURAL-FIREWALL-MESH-NFM-/ci.yml?style=flat-square&amp;label=CI" alt="GitHub Actions CI status" /></a>
-    <a href="https://github.com/rxnitkthyal01/-NEURAL-FIREWALL-MESH-NFM-/stargazers"><img src="https://img.shields.io/github/stars/rxnitkthyal01/-NEURAL-FIREWALL-MESH-NFM-?style=flat-square" alt="GitHub stars" /></a>
-    <a href="https://github.com/rxnitkthyal01/-NEURAL-FIREWALL-MESH-NFM-/releases"><img src="https://img.shields.io/github/downloads/rxnitkthyal01/-NEURAL-FIREWALL-MESH-NFM-/total?style=flat-square&amp;label=downloads" alt="GitHub release downloads" /></a>
+    <a href="https://github.com/rxnitkthyal01/NEURAL-FIREWALL-MESH-NFM/releases/latest"><img src="https://img.shields.io/github/v/release/rxnitkthyal01/NEURAL-FIREWALL-MESH-NFM?style=flat-square&amp;label=release" alt="Latest GitHub release" /></a>
+    <a href="LICENSE"><img src="https://img.shields.io/github/license/rxnitkthyal01/NEURAL-FIREWALL-MESH-NFM?style=flat-square" alt="GitHub license" /></a>
+    <a href="https://github.com/rxnitkthyal01/NEURAL-FIREWALL-MESH-NFM/actions/workflows/ci.yml"><img src="https://img.shields.io/github/actions/workflow/status/rxnitkthyal01/NEURAL-FIREWALL-MESH-NFM/ci.yml?style=flat-square&amp;label=CI" alt="GitHub Actions CI status" /></a>
+    <a href="https://github.com/rxnitkthyal01/NEURAL-FIREWALL-MESH-NFM/stargazers"><img src="https://img.shields.io/github/stars/rxnitkthyal01/NEURAL-FIREWALL-MESH-NFM?style=flat-square" alt="GitHub stars" /></a>
+    <a href="https://github.com/rxnitkthyal01/NEURAL-FIREWALL-MESH-NFM/releases"><img src="https://img.shields.io/github/downloads/rxnitkthyal01/NEURAL-FIREWALL-MESH-NFM/total?style=flat-square&amp;label=downloads" alt="GitHub release downloads" /></a>
+  </p>
+  <p><strong>Technology stack</strong></p>
+  <p>
+    <a href="https://docs.python.org/3.12/"><img src="https://img.shields.io/badge/Python-3.12%2B-3776AB?style=flat-square&amp;logo=python&amp;logoColor=white" alt="Python 3.12 or newer" /></a>
+    <a href="https://fastapi.tiangolo.com/"><img src="https://img.shields.io/badge/FastAPI-API-009688?style=flat-square&amp;logo=fastapi&amp;logoColor=white" alt="FastAPI" /></a>
+    <a href="https://typer.tiangolo.com/"><img src="https://img.shields.io/badge/Typer-CLI-7C3AED?style=flat-square" alt="Typer command-line interface" /></a>
+    <a href="https://www.sqlite.org/"><img src="https://img.shields.io/badge/SQLite-storage-003B57?style=flat-square&amp;logo=sqlite&amp;logoColor=white" alt="SQLite storage" /></a>
+    <a href="https://www.rfc-editor.org/rfc/rfc8446"><img src="https://img.shields.io/badge/TLS-1.3-2563EB?style=flat-square" alt="TLS 1.3 transport security" /></a>
+    <a href="https://react.dev/"><img src="https://img.shields.io/badge/React-optional_dashboard-149ECA?style=flat-square&amp;logo=react&amp;logoColor=white" alt="Optional React dashboard" /></a>
+    <a href="https://www.typescriptlang.org/"><img src="https://img.shields.io/badge/TypeScript-optional_dashboard-3178C6?style=flat-square&amp;logo=typescript&amp;logoColor=white" alt="Optional TypeScript dashboard" /></a>
   </p>
 </div>
 
