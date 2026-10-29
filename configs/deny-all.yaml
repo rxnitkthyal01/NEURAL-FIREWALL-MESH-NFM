@@ -1,0 +1,10 @@
+policy_id: nfm-policy
+version: 1
+rules:
+- effect: deny
+  source_roles:
+  - '*'
+  services:
+  - '*'
+  operations:
+  - '*'

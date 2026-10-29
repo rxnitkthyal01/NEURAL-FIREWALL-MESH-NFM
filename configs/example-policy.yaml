@@ -1,0 +1,11 @@
+policy_id: nfm-example
+version: 1
+rules:
+  - effect: allow
+    source_roles: [application]
+    services: [database]
+    operations: [connect]
+  - effect: deny
+    source_nodes: [compromised-node]
+    services: ["*"]
+    operations: ["*"]
