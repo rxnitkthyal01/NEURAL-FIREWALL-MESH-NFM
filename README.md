@@ -11,13 +11,15 @@
     <a href="https://github.com/rxnitkthyal01/NEURAL-FIREWALL-MESH-NFM/stargazers"><img src="https://img.shields.io/github/stars/rxnitkthyal01/NEURAL-FIREWALL-MESH-NFM?style=flat-square" alt="GitHub stars" /></a>
     <a href="https://github.com/rxnitkthyal01/NEURAL-FIREWALL-MESH-NFM/releases"><img src="https://img.shields.io/github/downloads/rxnitkthyal01/NEURAL-FIREWALL-MESH-NFM/total?style=flat-square&amp;label=downloads" alt="GitHub release downloads" /></a>
   </p>
-  <p><strong>Technology stack</strong></p>
+<p><strong>Technology stack</strong></p>
   <p>
     <a href="https://docs.python.org/3.12/"><img src="https://img.shields.io/badge/Python-3.12%2B-3776AB?style=flat-square&amp;logo=python&amp;logoColor=white" alt="Python 3.12 or newer" /></a>
     <a href="https://fastapi.tiangolo.com/"><img src="https://img.shields.io/badge/FastAPI-API-009688?style=flat-square&amp;logo=fastapi&amp;logoColor=white" alt="FastAPI" /></a>
     <a href="https://typer.tiangolo.com/"><img src="https://img.shields.io/badge/Typer-CLI-7C3AED?style=flat-square" alt="Typer command-line interface" /></a>
     <a href="https://www.sqlite.org/"><img src="https://img.shields.io/badge/SQLite-storage-003B57?style=flat-square&amp;logo=sqlite&amp;logoColor=white" alt="SQLite storage" /></a>
     <a href="https://www.rfc-editor.org/rfc/rfc8446"><img src="https://img.shields.io/badge/TLS-1.3-2563EB?style=flat-square" alt="TLS 1.3 transport security" /></a>
+    <a href="https://www.rfc-editor.org/rfc/rfc8446"><img src="https://img.shields.io/badge/ML-KEM-Kyber-2563EB?style=flat-square" alt="Post-Quantum ML-KEM" /></a>
+    <a href="https://www.rfc-editor.org/rfc/rfc8446"><img src="https://img.shields.io/badge/ML-DSA-Dilithium-2563EB?style=flat-square" alt="Post-Quantum ML-DSA" /></a>
     <a href="https://react.dev/"><img src="https://img.shields.io/badge/React-optional_dashboard-149ECA?style=flat-square&amp;logo=react&amp;logoColor=white" alt="Optional React dashboard" /></a>
     <a href="https://www.typescriptlang.org/"><img src="https://img.shields.io/badge/TypeScript-optional_dashboard-3178C6?style=flat-square&amp;logo=typescript&amp;logoColor=white" alt="Optional TypeScript dashboard" /></a>
   </p>
@@ -25,13 +27,15 @@
 
 NFM is a Python security core for protecting explicitly configured TCP services. Its current implementation uses TLS 1.3 mutual authentication, short-lived CA-signed node certificates, a deterministic deny-by-default policy engine, SQLite audit state, and a TCP proxy that checks identity and policy before connecting to an upstream service.
 
-This is an early MVP foundation, not a host-wide firewall or a replacement for SSH, curl, or netcat. It does not inspect arbitrary host traffic. The API supports administrator-approved remote enrollment, Ed25519-signed policies, HTTPS-authenticated identity/revocation snapshots, and administrator-controlled node isolation. NFM is operated from its CLI; `nfm tui` provides a live, read-only terminal overview of local controller state. A separate optional React dashboard is also available. nftables integration, automated compromise detection, and post-quantum transport remain outstanding.
+This is an early MVP foundation, not a host-wide firewall or a replacement for SSH, curl, or netcat. It does not inspect arbitrary host traffic. The API supports administrator-approved remote enrollment, **hybrid Ed25519/ML-DSA-signed policies**, HTTPS-authenticated identity/revocation snapshots, and administrator-controlled node isolation. NFM is operated from its CLI; `nfm tui` provides a live, read-only terminal overview of local controller state. A separate optional React dashboard is also available. nftables integration, automated compromise detection, and post-quantum transport remain outstanding.
 
 ## Requirements
 
 - Python 3.12 or newer
 - Node.js 20.19 or newer for the optional dashboard
 - Linux is the target for the initial protected-service deployment. The Python CLI and local core are designed to be portable, but this release has not been validated across operating systems.
+- **TPM 2.0** (optional, for hardware-backed key storage)
+- **PKCS#11 HSM** (optional, for cloud/on-prem hardware security modules)
 
 ## Install
 
@@ -217,7 +221,8 @@ In PowerShell, set the controller token with `$env:NFM_ADMIN_TOKEN = 'replace-wi
 
 ## Security design
 
-- ECDSA P-256 X.509 identities, signed by a local CA; certificates expire within 90 days.
+- **Post-Quantum Cryptography:** Hybrid Ed25519/ML-DSA signatures for policy bundles and ECDSA P-256 X.509 identities signed by a local CA; certificates expire within 90 days.
+- **Hardware-Backed Key Protection:** Optional TPM 2.0 and PKCS#11 HSM integration for CA and node private keys.
 - TLS 1.3 minimum with CA validation and mandatory client certificates at protected proxies.
 - The client validates the server's CA chain and exact `urn:nfm:node:<id>` identity SAN.
 - The proxy requires the identity to be enrolled and active in its local SQLite store, checks role consistency, and evaluates policy before opening an upstream connection. It rechecks active-session policy, credential expiration, and revocation once per second.
